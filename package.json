@@ -1,13 +1,14 @@
 {
   "name": "secure-remote-password",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "license": "MIT",
-  "repository": "LinusU/secure-remote-password",
+  "repository": "HuanCheng65/secure-remote-password",
   "scripts": {
-    "test": "standard && mocha"
+    "test": "oxlint && mocha"
   },
   "browser": {
-    "./lib/sha256.js": "./browser/sha256.js"
+    "./lib/sha256.js": "./browser/sha256.js",
+    "./lib/srp-integer.js": "./browser/srp-integer.js"
   },
   "dependencies": {
     "array-buffer-to-hex": "^1.0.0",
@@ -19,7 +20,9 @@
     "pad-start": "^1.0.2"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "standard": "^12.0.1"
-  }
+    "mocha": "^11.1.0",
+    "oxlint": "^0.15.13",
+    "prettier": "^3.5.3"
+  },
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
 }
